@@ -1,10 +1,17 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+Tests for typographus module
 
-import unittest
-from typographus import Typographus
+@see: http://code.google.com/p/typo-py/
+"""
+from django.test.testcases import TestCase
+from typograph.typographus import Typographus
 
-class TestPunctuation(unittest.TestCase):
+
+__all__ = ['TestPunctuation', ]
+
+
+class TestPunctuation(TestCase):
 
     def setUp(self):
         self._typo = Typographus()
@@ -54,5 +61,3 @@ class TestPunctuation(unittest.TestCase):
         self.assert_typo(u'<span style="white-space: nowrap;">ООО &laquo;Рога и Копыта&raquo;</span>',
                          u'ООО "Рога и Копыта"')
 
-if __name__ == '__main__':
-    unittest.main()

@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+"""
+Python typograph for Russian
+
+@author: Игорь Кононученко
+@see: http://code.google.com/p/typo-py/
+"""
 
 import re, htmlentitydefs, unicodedata
 
