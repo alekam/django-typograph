@@ -1,0 +1,4 @@
+include *.py
+exclude *.pyc
+recursive-include typograph *
+

@@ -1,0 +1,25 @@
+
+Installation
+
+Installation is very simple:
+
+0. Install it as python package.
+1. Add 'typograph' to INSTALLED_APPS of your project.
+2. Add 'typograph.urls' to your project urlconf.
+
+
+Usage example:
+
+If you want use typorgaph in admin area add this to your ModelAdmin class:: 
+
+    formfield_overrides = {
+        models.CharField: {'widget': TypographWidget},
+    }
+
+If you want use it in anything else, you can install it javascript::
+
+    $('#field_id').parent().append(new typo_btn('field_id'), {
+        'url' : '/typograph-api-url/',
+        'img' : '/typograph-img.png'    
+    }));
+
